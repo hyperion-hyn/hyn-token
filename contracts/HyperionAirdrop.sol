@@ -30,10 +30,10 @@ contract HyperionAirdrop is Ownable {
         return Hyperion(token).transferFrom(owner, _to, _number);
     }
 
-    function transfer(address[] _recipients, uint256[] _values) public onlyOwner returns (bool) {
+    function batchTransfer(address[] _recipients, uint256[] _values) public onlyOwner returns (bool) {
         require(_recipients.length == _values.length);
 
-        for(uint i = 0; i< _recipients.length; i++)
+        for(uint256 i = 0; i< _recipients.length; i++)
         {
             address _to = _recipients[i];
             uint256 _value = _values[i];
