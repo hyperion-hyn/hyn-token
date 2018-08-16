@@ -1,9 +1,8 @@
 pragma solidity ^0.4.24;
 
 import 'openzeppelin-solidity/contracts/token/ERC20/StandardToken.sol';
-import 'openzeppelin-solidity/contracts/ownership/Ownable.sol';
 
-contract Hyperion is StandardToken, Ownable {
+contract Hyperion is StandardToken {
     string  public constant name = "Hyperion Token";
     string  public constant symbol = "HYN";
     uint8   public constant decimals = 18;
